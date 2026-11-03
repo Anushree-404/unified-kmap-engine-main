@@ -1,0 +1,27 @@
+﻿AGROVA AI -- Data Preprocessing Report
+Generated: 2026-10-31 14:54:56
+
+Files in ML_MODEL/dataset/processed/
+--------------------------------------
+  crop_recommendation_features.csv              2200 rows  18 cols  349.5 KB
+  crop_recommendation_processed.csv             2200 rows  9 cols  190.7 KB
+  fertilizer_processed.csv                      2200 rows  18 cols  335.8 KB
+  irrigation_processed.csv                      10000 rows  29 cols  1357.1 KB
+  rainfall_processed.csv                        6727 rows  3 cols  133.5 KB
+  soil_data_processed.csv                       1000 rows  11 cols  171.9 KB
+  temp_processed.csv                            71311 rows  3 cols  1388.1 KB
+  weather_data_processed.csv                    1460 rows  12 cols  177.1 KB
+  yield_processed.csv                           56717 rows  5 cols  2092 KB
+
+Transformations applied
+  crop_recommendation_processed  : label_encoded added, 22 classes indexed 0-21
+  crop_recommendation_features   : 9 engineered columns added (interactions, ratios, polynomials, stress index)
+  irrigation_processed           : 9 categorical columns encoded (Soil_Type Crop_Type Season Irrigation_Type Water_Source Region Crop_Growth_Stage Mulching_Used Irrigation_Need)
+  fertilizer_processed           : 5 categorical columns encoded (label fertilizer N_status P_status K_status)
+  rainfall_processed             : leading space removed from Area column header
+  soil_data_processed            : 40 missing water_retention values filled with column mean 0.2949
+  temp_processed                 : pass-through clean copy
+  weather_data_processed         : pass-through clean copy
+  yield_processed                : 5 columns selected from 12 (Area Item Year Unit Value)
+
+[OK] All preprocessing complete.

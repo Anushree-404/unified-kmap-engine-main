@@ -1,0 +1,45 @@
+version: "3.9"
+
+# AGROVA AI — Docker Compose
+# Starts the Python FastAPI backend.
+# The frontend runs separately with Bun/Node (TanStack Start / Vite).
+#
+# Usage:
+#   docker-compose up --build          # Start all services
+#   docker-compose up backend          # Start backend only
+#   docker-compose down                # Stop and remove containers
+
+services:
+  # ── Python FastAPI Backend ───────────────────────────────────────────────────
+  backend:
+    build:
+      context: ./BACKEND
+      dockerfile: Dockerfile
+    container_name: agrova_backend
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mount ML_MODEL so the backend can load trained models at runtime
+      - ./ML_MODEL:/app/ML_MODEL:ro
+      # Mount FRONTEND/src/data for the JSON crop model
+      - ./FRONTEND/src/data:/app/FRONTEND/src/data:ro
+    env_file:
+      - ./BACKEND/.env
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8000
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+# ── Notes ─────────────────────────────────────────────────────────────────────
+# Frontend dev server:
+#   cd FRONTEND && bun install && bun run dev
+#
+# To train ML models before starting the backend:
+#   cd ML_MODEL && python training/train_crop_model.py
+#   cd ML_MODEL && python training/train_models.py

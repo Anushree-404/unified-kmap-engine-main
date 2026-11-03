@@ -1,0 +1,9 @@
+filename,rows,columns,size_kb,purpose,used_in_production,model_trained,missing_values,notes
+Crop_recommendation (1).csv,2200,8,144.4,Random Forest crop recommendation training,Yes,Random Forest Classifier,None,Primary ML dataset; perfectly balanced 22 classes x 100 samples
+crop_fertilizer_recommendation_dataset.csv,2200,13,310.9,Fertilizer recommendation reference,No,None,None,Extends crop rec dataset with fertilizer and NPK status columns
+irrigation_prediction.csv,10000,20,1171.4,Irrigation need prediction (Low/Medium/High),No,Script only - not deployed,None,Class imbalance: High=3.4%; 9 categorical columns
+rainfall.csv,6727,3,126.9,Historical average annual rainfall by country,No,None,None,Global dataset; not India-specific
+soil_data.csv,1000,11,170.7,Synthetic soil sample profiles,No,None,40 in water_retention,40 missing values in water_retention filled with mean 0.2949
+temp.csv,71311,3,1388.1,Historical average annual temperature by country,No,None,None,Records from 1849; global scope
+weather_data.csv,1460,12,177.1,Simulated regional daily weather data,No,None,None,4 Indian regions; production uses live Open-Meteo API
+yield.csv,56717,12,3892.8,FAO historical crop yield data,No,None,None,No yield prediction module implemented; dataset is available only

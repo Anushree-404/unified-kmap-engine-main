@@ -1,0 +1,10 @@
+model_name,algorithm,dataset,training_rows,test_rows,classes,accuracy,weighted_f1,mae_day7,source,deployed,notes
+Crop Recommendation RF,Random Forest Classifier,Crop_recommendation (1).csv,1760,440,22,0.9955,~0.995 (estimated),N/A,crop-model.json validationAccuracy field,Yes,99.55% verified from deployed model JSON
+Weather Forecast,Ridge Regression (multi-horizon),ERA5 reanalysis ~22 years,~33150,~5850,N/A (regression),N/A,N/A,See MAE columns,weather-model.json mae field,Yes,Day-7 MAE values verified from deployed JSON
+Weather Forecast - Max Temp,Ridge Regression,ERA5,,,N/A,N/A,N/A,1.05 C,weather-model.json mae.temperature_2m_max.7,Yes,
+Weather Forecast - Min Temp,Ridge Regression,ERA5,,,N/A,N/A,N/A,0.78 C,weather-model.json mae.temperature_2m_min.7,Yes,
+Weather Forecast - Rainfall,Ridge Regression,ERA5,,,N/A,N/A,N/A,7.60 mm,weather-model.json mae.precipitation_sum.7,Yes,
+Weather Forecast - Humidity,Ridge Regression,ERA5,,,N/A,N/A,N/A,5.03 pct,weather-model.json mae.relative_humidity_2m_mean.7,Yes,
+Agricultural Advisory Chatbot,Rule-based keyword matching,Hard-coded rules,N/A,N/A,N/A,N/A,N/A,N/A,AgronomistChat.tsx,Yes,No ML model - rule engine only
+Crop Disease Detection CNN,CNN (planned EfficientNet-B0),PlantVillage (not available),N/A,N/A,N/A,Not evaluated,Not evaluated,N/A,Not implemented,No,UI mockup only - no model exists
+Irrigation Prediction,RF/GBM/CatBoost,irrigation_prediction.csv,N/A,N/A,3,Not evaluated,Not evaluated,N/A,train_models.py (not run),No,Script exists but not deployed

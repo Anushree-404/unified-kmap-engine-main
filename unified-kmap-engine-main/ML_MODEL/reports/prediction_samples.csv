@@ -1,0 +1,9 @@
+example_id,module,N,P,K,temperature,humidity,ph,rainfall,predicted_class,confidence_pct,label_type,notes
+1,Crop Recommendation,90,42,43,20.88,82.0,6.5,202.94,rice,~91,Actual dataset row 1,Row 1 of training data - known rice sample
+2,Crop Recommendation,85,58,41,21.77,80.32,7.04,226.66,rice,~88,Actual dataset row 2,Row 2 of training data - known rice sample
+3,Crop Recommendation,22,16,30,27.0,94.0,6.2,142.0,coconut,~75,Illustrative,Input values match coconut profile in dataset
+4,Crop Recommendation,118,46,20,24.0,80.0,7.5,80.0,cotton,~70,Illustrative,High N + alkaline pH + low rainfall matches cotton
+5,Crop Recommendation,101,29,30,25.5,59.0,5.9,158.0,coffee,~80,Illustrative,Coffee profile: acidic soil + moderate humidity
+6,Disease Detection,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Early Blight (Alternaria solani),94,Static mockup,demo.tsx SAMPLE_DIAGNOSES[0] - not a real prediction
+7,Disease Detection,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Bacterial Leaf Blight,91,Static mockup,demo.tsx SAMPLE_DIAGNOSES[1] - not a real prediction
+8,Disease Detection,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Leaf Rust (Puccinia spp.),89,Static mockup,demo.tsx SAMPLE_DIAGNOSES[2] - not a real prediction

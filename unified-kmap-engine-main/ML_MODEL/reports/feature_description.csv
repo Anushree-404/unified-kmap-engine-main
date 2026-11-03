@@ -1,0 +1,26 @@
+feature_name,dataset,type,unit,min,mean,max,description,used_in_model,notes
+N,Crop_recommendation (1).csv,float,kg/ha,0,50.552,140,Nitrogen content in soil,Yes,One of 7 RF input features
+P,Crop_recommendation (1).csv,float,kg/ha,5,53.363,145,Phosphorus content in soil,Yes,One of 7 RF input features
+K,Crop_recommendation (1).csv,float,kg/ha,5,48.149,205,Potassium content in soil,Yes,One of 7 RF input features; widest range
+temperature,Crop_recommendation (1).csv,float,celsius,8.826,25.616,43.675,Mean ambient temperature,Yes,One of 7 RF input features
+humidity,Crop_recommendation (1).csv,float,percent,14.258,71.482,99.982,Relative humidity,Yes,One of 7 RF input features
+ph,Crop_recommendation (1).csv,float,pH scale,3.505,6.469,9.935,Soil pH,Yes,One of 7 RF input features
+rainfall,Crop_recommendation (1).csv,float,mm,20.211,103.464,298.560,Annual rainfall,Yes,One of 7 RF input features
+label,Crop_recommendation (1).csv,string,crop name,,,,Target variable: 22 crop class names,Target,22 balanced classes
+Soil_Type,irrigation_prediction.csv,string,category,,,,Clay/Loam/Sandy/Silt,No (not deployed),Categorical; 4 unique values
+Soil_pH,irrigation_prediction.csv,float,pH scale,,,,Soil pH,No (not deployed),
+Soil_Moisture,irrigation_prediction.csv,float,percent,,,,Current soil moisture percentage,No (not deployed),
+Organic_Carbon,irrigation_prediction.csv,float,percent,,,,Organic carbon content,No (not deployed),
+Temperature_C,irrigation_prediction.csv,float,celsius,,,,Air temperature,No (not deployed),
+Humidity,irrigation_prediction.csv,float,percent,,,,Relative humidity,No (not deployed),
+Rainfall_mm,irrigation_prediction.csv,float,mm,,,,Recent rainfall amount,No (not deployed),
+Irrigation_Need,irrigation_prediction.csv,string,Low/Medium/High,,,,Target variable for irrigation model,Target (not deployed),Class imbalance: Low 58.6% / Medium 38.0% / High 3.4%
+NP_interaction,crop_recommendation_features.csv,float,derived,,,,N x P interaction term,Engineered (not in production),Feature engineering
+NK_interaction,crop_recommendation_features.csv,float,derived,,,,N x K interaction term,Engineered (not in production),Feature engineering
+PK_interaction,crop_recommendation_features.csv,float,derived,,,,P x K interaction term,Engineered (not in production),Feature engineering
+N_P_ratio,crop_recommendation_features.csv,float,ratio,,,,N divided by P+epsilon,Engineered (not in production),Feature engineering
+N_K_ratio,crop_recommendation_features.csv,float,ratio,,,,N divided by K+epsilon,Engineered (not in production),Feature engineering
+ph_squared,crop_recommendation_features.csv,float,derived,,,,pH squared,Engineered (not in production),Captures non-linear pH response
+temp_squared,crop_recommendation_features.csv,float,derived,,,,Temperature squared,Engineered (not in production),Captures non-linear heat stress
+rainfall_log,crop_recommendation_features.csv,float,derived,,,,Log of rainfall+1,Engineered (not in production),Reduces right skew
+humidity_temp_stress,crop_recommendation_features.csv,float,index,,,,Humidity x Temperature / 100,Engineered (not in production),Combined heat-humidity stress index

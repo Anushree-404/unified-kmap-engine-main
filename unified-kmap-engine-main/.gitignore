@@ -1,0 +1,84 @@
+# ── Node / Bun ────────────────────────────────────────────────────────────────
+node_modules/
+dist/
+dist-ssr/
+.output/
+.vinxi/
+.tanstack/
+.nitro/
+*.local
+
+# ── Vite / TanStack Start ─────────────────────────────────────────────────────
+.wrangler/
+.dev.vars
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+pip-wheel-metadata/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+
+# ── ML model artifacts (large binary files — regenerate with training scripts) ─
+ML_MODEL/models/*.pkl
+ML_MODEL/models/*.joblib
+ML_MODEL/models/*.keras
+ML_MODEL/models/*.h5
+ML_MODEL/models/*.pt
+ML_MODEL/models/*.pth
+ML_MODEL/evaluation/visualizations/
+ML_MODEL/dataset/processed/
+
+# Keep model metadata / summaries
+!ML_MODEL/models/.gitkeep
+
+# ── Logs ─────────────────────────────────────────────────────────────────────
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ── Secrets / environment files ───────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+!BACKEND/.env.example
+!FRONTEND/.env.example
+
+# ── OS ────────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Editor ────────────────────────────────────────────────────────────────────
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ── Docker ────────────────────────────────────────────────────────────────────
+.docker/
+
+# ── Misc ─────────────────────────────────────────────────────────────────────
+*.local
+*.bak
+*.tmp
