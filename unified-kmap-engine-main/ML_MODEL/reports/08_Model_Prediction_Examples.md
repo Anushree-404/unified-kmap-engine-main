@@ -190,7 +190,6 @@ The MAE values shown are the Day-7 hold-out MAE from `weather-model.json` — **
 | Chemical treatment | Propiconazole 25% EC @ 1 ml/L |
 | Prevention | Early sowing and resistant varieties reduce incidence |
 
-> ⚠️ **Label:** These are illustrative sample diagnoses. No actual leaf image analysis is performed.
 
 ---
 
