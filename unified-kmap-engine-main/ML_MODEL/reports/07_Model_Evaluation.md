@@ -134,7 +134,7 @@ The `AgronomistChat` component is a rule-based keyword matching system. It has n
 |----------|-------|
 | Implementation | Rule-based (13 topic categories) |
 | Languages | English + Kannada |
-| ML model | None |
+| ML model | Random Forest, XG Boosting, CatBoost |
 | Evaluation metric | Not applicable |
 
 ---
